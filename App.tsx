@@ -39,7 +39,7 @@ function App(): JSX.Element {
 
     const isFrom = config.APP_CONFIG ?? '';
 
-    
+
 
     return (
         <SafeAreaView style={[iStyles.screenContainer, { backgroundColor }]}>
@@ -50,7 +50,7 @@ function App(): JSX.Element {
             <View style={iStyles.container}>
                 <View style={iStyles.greetingContainer}>
                     <Text style={[iStyles.greetingText, iStyles.font]}>
-                        Hi Sathish K,
+                        Hi Ammar Abid,
                     </Text>
                     <Text style={[iStyles.greetingText, iStyles.font]}>
                         {`I am from ${isFrom}`}
