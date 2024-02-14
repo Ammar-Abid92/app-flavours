@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "1057031191891",
+    "project_id": "flavorapp-b7c62",
+    "storage_bucket": "flavorapp-b7c62.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057031191891:android:0af06efa9cd4fd996035a6",
+        "android_client_info": {
+          "package_name": "com.flavorApp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJxcEFhR7xuPDuGI5qWSLH1jEEbdZYhdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057031191891:android:24653aec169176a36035a6",
+        "android_client_info": {
+          "package_name": "com.flavorapp.development"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJxcEFhR7xuPDuGI5qWSLH1jEEbdZYhdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057031191891:android:b3fe485086a5ba076035a6",
+        "android_client_info": {
+          "package_name": "com.flavorapp.staging"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJxcEFhR7xuPDuGI5qWSLH1jEEbdZYhdU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

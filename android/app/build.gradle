@@ -1,11 +1,24 @@
 apply plugin: "com.android.application"
 apply plugin: "org.jetbrains.kotlin.android"
 apply plugin: "com.facebook.react"
+apply plugin: 'com.google.gms.google-services' // Firebase
+
 
 /**
  * This is the configuration block to customize your React Native Android app.
  * By default you don't need to apply any configuration, just uncomment the lines you need.
  */
+
+ // flavor work
+
+ project.ext.envConfigFiles = [
+   Development: ".env.production",
+   Production: ".env.development",
+   Staging: ".env.staging",
+]
+
+apply from: project(':react-native-config').projectDir.getPath() + '/dotenv.gradle'
+
 react {
     /* Folders */
     //   The root of your project, i.e. where "package.json" lives. Default is '..'
@@ -75,12 +88,17 @@ android {
     compileSdk rootProject.ext.compileSdkVersion
 
     namespace "com.flavorapp"
+    
     defaultConfig {
         applicationId "com.flavorapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
+        // app-flavor work
+        flavorDimensions "default"
+        resValue 'string', 'build_config_package','com.flavorapp'
+
     }
     signingConfigs {
         debug {
@@ -102,6 +120,26 @@ android {
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
+
+    // flavor work
+    productFlavors {
+        Development {
+            applicationIdSuffix ".development"
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
+        Staging {
+            applicationIdSuffix ".staging"
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
+        Production {
+            applicationIdSuffix ""
+            minSdkVersion rootProject.ext.minSdkVersion
+            targetSdkVersion rootProject.ext.targetSdkVersion
+        }
+    }
+    
 }
 
 dependencies {
